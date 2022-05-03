@@ -25,7 +25,7 @@ const Home = () => {
               </h2>
               <div className="explore-btn-wrapper mt-4">
                 <button className="py-2 px-4 font-bold hover:text-blue-900 transition bg-blue-500 rounded text-white">
-                  Explore Now
+                  <NavLink to={"/mountain"}>Explore More</NavLink>
                 </button>
               </div>
               <div className="social-wrapper flex mt-8 	 w-max rounded">

@@ -14,6 +14,9 @@ import Adventure from "./components/Adventure";
 import Mountain from "./components/Mountain";
 import Covid from "./components/Covid";
 import ThingsToDo from "./components/ThingsToDo";
+import Lake from "./components/Lake";
+
+
 
 
 function App() {
@@ -29,6 +32,12 @@ function App() {
         <Route path="/covid" element={<Covid />} />
         <Route path="/mountain" element={<Mountain />} />
         <Route path="/todo" element={<ThingsToDo />} />
+        <Route path="/lake" element={<Lake />} />
+        <Route path="/food" element={<Food />} />
+        <Route path="/adventure" element={<Adventure />} />
+
+
+
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>

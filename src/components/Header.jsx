@@ -10,13 +10,15 @@ import { NavLink } from "react-router-dom";
 import DarkModeToggler from "./DarkModeToggler";
 
 const Header = () => {
+
+  
+
+  
   return (
     <>
-      <header className="site-header ">
+      <header className="site-header">
         <div className="header-wrapper mx-auto">
-          <div className="top-header flex justify-center items-center w-full ">
-            <TopHeader />
-          </div>
+        <TopHeader />
           <div className="bottom-header flex container mx-auto py-4 justify-between items-center">
             <div className="header-left flex">
               <div className="menu-btn">

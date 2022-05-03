@@ -16,7 +16,6 @@ const DarkModeToggler = () => {
   }, [storedMode]);
 
   body.classList.add(mode);
-
   if (body.classList.contains("light")) {
     body.classList.remove("light");
   }

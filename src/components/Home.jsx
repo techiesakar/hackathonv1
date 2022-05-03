@@ -1,12 +1,15 @@
 import React from "react";
 import Everest from "./assets/img/everest.jpg";
+import Slider from "react-slick";
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 const Home = () => {
+  const body = document.body;
+  body.classList.add("home-page");
   return (
     <>
-      <div className="home flex items-center">
+      <div className="home">
         <div className="home-wrapper container mx-auto relative">
           <div className="fixed-img-wrapper fixed">
             <img src={Everest} alt="" />

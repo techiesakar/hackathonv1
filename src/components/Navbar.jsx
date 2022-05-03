@@ -1,54 +1,50 @@
 import React, { useState } from "react";
-import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
-import { BsBookmarkFill } from "react-icons/bs";
-import { RiServiceLine } from "react-icons/ri";
-import { BiMessage } from "react-icons/bi";
+import { NavLink } from "react-router-dom";
+
 
 const Navbar = () => {
-  const [activeNav, setActiveNav] = useState("#");
+  const styles = {
+    className: "px-5",
+    //   activeClassName: "underline text-gray-900",
+  };
+  const links = [
+    {
+      className: styles.className,
+      to: "/todo",
+      name: "Things to Do",
+    },
 
+    {
+      className: styles.className,
+      to: "/covid",
+      name: "Time",
+    },
+    {
+      className: styles.className,
+      to: "/covid",
+      name: "Guide",
+    },
+    {
+      className: styles.className,
+      to: "/covid",
+      name: "Clean",
+    },
+  ];
   return (
     <>
       <nav>
-        <a
-          onClick={() => setActiveNav("#")}
-          className={activeNav === "#" ? "active text-white pl-6" : "text-white pl-6"}
-          href="#"
-          rel="noreferrer"
-        >
-          Places
-        </a>
-        <a
-          onClick={() => setActiveNav("#about")}
-          className={
-            activeNav === "#about" ? "active text-white pl-6" : "text-white pl-6"
-          }
-          href="#about"
-          rel="noreferrer"
-        >
-          Explore
-        </a>
-        <a
-          onClick={() => setActiveNav("#experience")}
-          className={
-            activeNav === "#experience" ? "active text-white pl-6" : "text-white pl-6"
-          }
-          href="#experience"
-          rel="noreferrer"
-        >
-          Membership
-        </a>
-        <a
-          onClick={() => setActiveNav("#services")}
-          className={
-            activeNav === "#services" ? "active text-white pl-6" : "text-white pl-6"
-          }
-          href="#services"
-          rel="noreferrer"
-        >
-          Private Homes
-        </a>
+        <ul className="top-menu flex py-2">
+          {links.map((link, index) => (
+            <li key={index} className={`${link.className}`}>
+              <NavLink
+                to={link.to}
+                className="top-menu-item text-white text-sm"
+              >
+                {link.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
       </nav>
     </>
   );

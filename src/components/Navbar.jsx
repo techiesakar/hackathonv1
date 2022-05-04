@@ -16,19 +16,10 @@ const Navbar = () => {
 
     {
       className: styles.className,
-      to: "/covid",
-      name: "Time",
+      to: "/data",
+      name: "Data",
     },
-    {
-      className: styles.className,
-      to: "/covid",
-      name: "Guide",
-    },
-    {
-      className: styles.className,
-      to: "/covid",
-      name: "Clean",
-    },
+    
   ];
   return (
     <>

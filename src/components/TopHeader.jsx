@@ -24,13 +24,13 @@ const TopHeader = () => {
     {
       className: styles.className,
       to: "/covid",
-      name: "Safety",
+      name: "Covid-19",
     },
 
     {
       className: styles.className,
       to: "/covid",
-      name: "Time",
+      name: "Explore More",
     },
     {
       className: styles.className,

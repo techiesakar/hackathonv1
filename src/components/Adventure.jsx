@@ -9,6 +9,12 @@ import Skydiving from "./assets/img/skydiving.jpeg";
 import Treeking from "./assets/img/treeking.jpg";
 
 const Adventure = () => {
+
+  const body = document.body;
+
+    if (body.classList.contains("home-page")) {
+      body.classList.remove("home-page");
+    }
   const styles = {
     className: "px-5",
   };
@@ -56,9 +62,11 @@ const Adventure = () => {
   ];
   return (
     <>
-      <div className="gallery-container container mx-auto">
-        <div className="gallery-wrapper">
-          <h2 className="page-title text-3xl font-bold">Experience the Adventure in Nepal</h2>
+      <div className="gallery-container  ">
+        <div className="gallery-wrapper container mx-auto">
+          <h2 className="page-title text-3xl font-bold">
+            Experience the Adventure in Nepal
+          </h2>
           <ul className="gallery-items  mt-4">
             {adventures.map((item, index) => (
               <li

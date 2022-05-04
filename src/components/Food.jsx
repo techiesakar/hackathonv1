@@ -62,8 +62,8 @@ const Food = () => {
   ];
   return (
     <>
-      <div className="gallery-container container mx-auto">
-        <div className="gallery-wrapper">
+     <div className="gallery-container  ">
+        <div className="gallery-wrapper container mx-auto">
           <h2 className="page-title text-3xl font-bold">Food & Culture in Nepal</h2>
           <ul className="gallery-items  mt-4">
             {foods.map((item, index) => (

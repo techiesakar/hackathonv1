@@ -7,7 +7,7 @@ import Makalu from "./assets/img/makalu.jpg";
 import Fishtail from "./assets/img/fishtail.jpg";
 import Choyou from "./assets/img/choyou.jpg";
 
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Mountain = () => {
   const body = document.body;
@@ -22,74 +22,75 @@ const Mountain = () => {
   const mountains = [
     {
       className: styles.className,
-      to: "/everest",
+      to: "/mountain/everest",
       name: "Mt Everest",
       image: Everest,
       title: "Mt Everest - Highest Peak of the World",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque fugiat dicta qui beatae impedit provident ipsum dolore! Laboriosam voluptatibus atque hic at quidem, incidunt reiciendis, reprehenderit explicabo inventore omnis quis.       ",
-    },
+      },
     {
       className: styles.className,
-      to: "/Kangchenjunga",
+      to: "/mountain/Kangchenjunga",
       name: "Mt Kangchenjunga",
       image: Kangchenjunga,
     },
     {
       className: styles.className,
-      to: "/dhaulagiri",
+      to: "/mountain/dhaulagiri",
       name: "Mt Dhaulagiri",
       image: Dhaulagiri,
     },
     {
       className: styles.className,
-      to: "/fishtail",
+      to: "/mountain/fishtail",
       name: "Mt Fishtail",
       image: Fishtail,
     },
     {
       className: styles.className,
-      to: "/annapurna",
+      to: "/mountain/annapurna",
       name: "Mt Annapurna",
       image: Annapurna,
     },
     {
       className: styles.className,
-      to: "/lhotse",
+      to: "/mountain/lhotse",
       name: "Mt Lhotse",
       image: Lhotse,
     },
     {
       className: styles.className,
-      to: "/makalu",
+      to: "/mountain/makalu",
       name: "Mt Makalu",
       image: Makalu,
     },
     {
       className: styles.className,
-      to: "/choyou",
+      to: "/mountain/choyou",
       name: "Mt Choyou",
       image: Choyou,
     },
   ];
   return (
     <>
-      <div className="gallery-container container mx-auto">
-        <div className="gallery-wrapper">
+      <div className="gallery-container  ">
+        <div className="gallery-wrapper container mx-auto">
           <h2 className="page-title text-3xl font-bold">
-            Explore Beautiful Mountains in Nepal
+            Explore the Mountains in Nepal
           </h2>
           <ul className="gallery-items  mt-4">
             {mountains.map((item, index) => (
               <li
                 className="gallery-item  relative rounded-lg overflow-hidden"
                 key={index}
-              >
+              >  <NavLink to={item.to}>
                 <img className="h-full rounded-md" src={item.image} alt="" />
                 <div className="gallery-item-content absolute flex items-center justify-center">
                   <h2 className="p-2">{item.name}</h2>
                 </div>
                 <a href="#" className="overlay transition"></a>
+              
+                  
+                </NavLink>
               </li>
             ))}
           </ul>

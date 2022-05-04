@@ -1,5 +1,7 @@
 import React from "react";
+import Begnas from "./assets/img/begnas.jpg";
 import Everest from "./assets/img/everest.jpg";
+
 import Slider from "react-slick";
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -51,18 +53,18 @@ const Home = () => {
             </div>
           </div>
           <div className="home-right"></div>
-          <div className="more-mountains flex items-center px-8 py-6 shadow rounded max-w-fit text-white absolute">
+          <div className="more-mountains hover:translate-y-1 transition flex items-center px-8 py-6 shadow rounded max-w-fit text-white absolute">
             <div className="mountains-content mr-4">
-              <h2 className="font-bold">Top 8 Highest Mountain</h2>
+              <h2 className="font-bold">Beautiful Lakes in Nepal</h2>
               <span className="flex items-center">
-                <NavLink to={"/mountain"}>
+                <NavLink to={"/lake"} className="flex items-center">
                   <span className="mr-2">More</span> <AiOutlineArrowRight />
                 </NavLink>
               </span>
             </div>
             <div className="mountain-image">
               <NavLink to={"/mountain"}>
-                <img className="w-36 h-28" src={Everest} alt="" />
+                <img className="w-36 h-28" src={Begnas} alt="" />
               </NavLink>
             </div>
           </div>

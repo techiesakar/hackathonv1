@@ -9,6 +9,11 @@ import Begnas from "./assets/img/begnas.jpg";
 import Phoksundo from "./assets/img/phoksundo.jpg";
 
 const Lake = () => {
+  const body = document.body;
+
+  if (body.classList.contains("home-page")) {
+    body.classList.remove("home-page");
+  }
   const styles = {
     className: "px-5",
   };
@@ -56,9 +61,11 @@ const Lake = () => {
   ];
   return (
     <>
-      <div className="gallery-container container mx-auto">
-        <div className="gallery-wrapper">
-          <h2 className="page-title text-3xl font-bold">Beautiful Lakes in Nepal</h2>
+      <div className="gallery-container  ">
+        <div className="gallery-wrapper container mx-auto">
+          <h2 className="page-title text-3xl font-bold">
+            Beautiful Lakes in Nepal
+          </h2>
           <ul className="gallery-items  mt-4">
             {lakes.map((item, index) => (
               <li

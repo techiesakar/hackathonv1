@@ -51,12 +51,24 @@ header {
 .home {
   display: flex;
   align-items: center;
-  /* height: 100vh; */
-  /* margin-top: -138px; */
+  height: 100vh;
+}
+
+.dark .home,
+.dark .top-header {
+  background: rgba(0, 0, 0, 0.829);
+}
+
+.dark .header-wrapper {
+  background: rgba(0, 0, 0, 0.829);
+}
+
+.dark .gallery-container {
+  background: black;
 }
 
 .home-left {
-  margin-top: 180px;
+  margin-top: -180px;
 }
 
 .home .social-wrapper a {
@@ -79,11 +91,27 @@ header {
   width: 100%;
   object-fit: cover;
   border-radius: 4px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.slick-track img:hover {
+  transform: scale(1.1);
 }
 
 .slick-dots li button:before {
   font-size: 8px;
 }
+
+.place {
+  min-height: 100vh;
+}
+
+.place-wrapper {
+  margin-top: 8%;
+}
+
+
 
 .place-item .overlay-content-wrapper {
   padding: 10%;
@@ -112,13 +140,19 @@ header {
 
 }
 
-.todo {
+.todo,
+.signup {
+  min-height: 80vh;
+}
+
+.todo-wrapper {
   margin-top: 6%;
   padding: 2rem;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.todo-item {
+.todo-item,
+.place-item {
   display: flex !important;
   gap: 1rem;
   justify-content: space-between;
@@ -149,13 +183,23 @@ header {
 }
 
 .slick-prev:before {
-  content: '→';
+  content: '←';
   color: #041928 !important;
 }
 
-.slick-track img {
+
+.dark  .slick-next:before {
+  color: #fff !important;
+}
+
+.dark  .slick-prev:before {
+  color: #fff !important;
+}
+
+.todo .slick-track img,
+.place .slick-track img {
   min-height: 220px;
-  max-height: 340px;
+  max-height: 280px !important;
   height: 100% !important;
 }
 
@@ -163,9 +207,13 @@ header {
   bottom: -90px !important;
 }
 
-.slick-dots li button:before {
+.todo .slick-dots li button:before {
   width: 24px !important;
   height: 24px !important;
+}
+
+.todo-item-img {
+  overflow: hidden
 }
 
 .todo-item-img img {
@@ -200,6 +248,9 @@ header {
   text-align: center;
 }
 
+.dark .gallery-wrapper .page-title {
+  color: #fff;
+}
 
 
 .gallery-item .overlay {
@@ -237,4 +288,113 @@ header {
   background-color: #04253ada;
   border-radius: 4px;
   color: #fff;
+}
+
+
+
+.single-post-body p {
+  margin-bottom: 2rem;
+}
+
+.featured-img {
+  float: right;
+  padding: 1rem;
+}
+
+.featured-img img {
+  max-height: 320px;
+}
+
+/* Single Post */
+
+.single-post {
+  min-height: 100vh;
+}
+
+.single-post h2 {
+  font-size: 24px;
+  margin: 14px 0;
+}
+
+.dark .single-post {
+  background-color: black;
+  color: #fff;
+}
+
+.dark .single-post p {
+  margin: 14px 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.dark #root {
+  background: black;
+  color: #fff;
+}
+
+.signup-form-wrapper {
+  max-width: 620px;
+  width: 100%;
+}
+
+.signup-form-wrapper form,
+.contact form {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+
+.signup-form-wrapper input,
+.contact input {
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.signup-form-wrapper .fname,
+.signup-form-wrapper .lname {
+  width: 50%;
+}
+
+.checkbox {
+  width: auto !important;
+  margin-right: 0.5rem;
+}
+
+.form-group.name {
+  gap: 1rem;
+}
+
+.required {
+  font-size: 24px;
+  color: red;
+}
+
+footer {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(21, 110, 179, 1) 100%, rgba(217, 205, 205, 1) 100%);
+}
+
+.contact form {
+  max-width: 540px;
+}
+
+.contact label {
+  display: flex;
+  align-items: center
+}
+
+.contact .name input {
+  width: 50%
+}
+
+.contact {
+  min-height: 80vh;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  border: 1px solid rgb(112, 112, 112);
 }
